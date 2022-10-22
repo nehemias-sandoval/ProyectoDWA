@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact</title>
+    <title>SpaceX</title>
     <link
       rel="stylesheet"
       type="text/css"
@@ -25,7 +25,7 @@
       class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-light sticky-top"
     >
       <div class="container-fluid">
-        <a class="navbar-brand" href="../index.html"
+        <a class="navbar-brand" href="../../index.html"
           ><i class="fa-solid fa-rocket"></i> Ascencion Orbit</a
         >
         <button
@@ -45,15 +45,15 @@
               <a
                 class="nav-link active"
                 aria-current="page"
-                href="../index.html"
+                href="../../index.html"
                 >Home</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
+              <a class="nav-link" href="../about.html">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
+              <a class="nav-link" href="../contact.html">Contact</a>
             </li>
             <li class="nav-item dropdown">
               <a
@@ -67,22 +67,16 @@
               </a>
               <ul class="dropdown-menu">
                 <li>
-                  <a class="dropdown-item" href="spacex/company.html"
-                    >Company</a
-                  >
+                  <a class="dropdown-item" href="company.html">Company</a>
                 </li>
+                <li><a class="dropdown-item" href="crew.html">Crew</a></li>
                 <li>
-                  <a class="dropdown-item" href="spacex/crew.html">Crew</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="spacex/platforms.html"
+                  <a class="dropdown-item" href="platforms.html"
                     >Landing Platforms</a
                   >
                 </li>
                 <li>
-                  <a class="dropdown-item" href="spacex/launches.html"
-                    >Launches</a
-                  >
+                  <a class="dropdown-item" href="launches.html">Launches</a>
                 </li>
               </ul>
             </li>
@@ -99,7 +93,7 @@
               </a>
               <ul class="dropdown-menu">
                 <li>
-                  <a class="dropdown-item" href="nasa/mars.html">Mars</a>
+                  <a class="dropdown-item" href="../nasa/mars.html">Mars</a>
                 </li>
               </ul>
             </li>
@@ -107,6 +101,90 @@
         </div>
       </div>
     </nav>
+    <div class="container">
+      <h1 class="mb-3 mt-3 text-light">SpaceX:</h1>
+      <img
+        src="../../assets/img/spacex.jpg"
+        class="img-fluid rounded mb-5 border border-secondary"
+        alt="SpaceX"
+      />
+      <div class="accordion mb-5" id="accordionExample">
+        <div class="accordion-item bg-dark">
+          <h2 class="accordion-header" id="headingOne">
+            <button
+              class="accordion-button bg-dark text-light"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseGeneralData"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              General Data
+            </button>
+          </h2>
+          <div
+            id="collapseGeneralData"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingOne"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <ul id="generalData" class="list-group"></ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item bg-dark">
+          <h2 class="accordion-header" id="headingOne">
+            <button
+              class="accordion-button bg-dark text-light"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseSocialNetworks"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              Social Networks
+            </button>
+          </h2>
+          <div
+            id="collapseSocialNetworks"
+            class="accordion-collapse collapse show"
+            aria-labelledby="headingOne"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <ul id="SocialNetworks" class="list-group"></ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item bg-dark">
+          <h2 class="accordion-header" id="headingOne">
+            <button
+              class="accordion-button bg-dark text-light"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseHeadquarters"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              Headquarters
+            </button>
+          </h2>
+          <div
+            id="collapseHeadquarters"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingOne"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <ul id="Headquarters" class="list-group"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <footer class="text-center text-lg-start bg-dark text-muted">
       <section
@@ -158,5 +236,6 @@
       </section>
       <div class="text-center p-4">© 2022 Copyright: Ascencion Orbit</div>
     </footer>
+    <script src="../../assets/js/spacex/company.js"></script>
   </body>
 </html>

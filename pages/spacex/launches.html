@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact</title>
+    <title>Launches</title>
     <link
       rel="stylesheet"
       type="text/css"
@@ -19,13 +19,23 @@
       data-auto-replace-svg="nest"
     ></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+      input[type="number"]::-webkit-inner-spin-button,
+      input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      input[type="number"] {
+        -moz-appearance: textfield;
+      }
+    </style>
   </head>
   <body class="bg-dark">
     <nav
       class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-light sticky-top"
     >
       <div class="container-fluid">
-        <a class="navbar-brand" href="../index.html"
+        <a class="navbar-brand" href="../../index.html"
           ><i class="fa-solid fa-rocket"></i> Ascencion Orbit</a
         >
         <button
@@ -45,15 +55,15 @@
               <a
                 class="nav-link active"
                 aria-current="page"
-                href="../index.html"
+                href="../../index.html"
                 >Home</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
+              <a class="nav-link" href="../about.html">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
+              <a class="nav-link" href="../contact.html">Contact</a>
             </li>
             <li class="nav-item dropdown">
               <a
@@ -67,22 +77,16 @@
               </a>
               <ul class="dropdown-menu">
                 <li>
-                  <a class="dropdown-item" href="spacex/company.html"
-                    >Company</a
-                  >
+                  <a class="dropdown-item" href="company.html">Company</a>
                 </li>
+                <li><a class="dropdown-item" href="crew.html">Crew</a></li>
                 <li>
-                  <a class="dropdown-item" href="spacex/crew.html">Crew</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="spacex/platforms.html"
+                  <a class="dropdown-item" href="platforms.html"
                     >Landing Platforms</a
                   >
                 </li>
                 <li>
-                  <a class="dropdown-item" href="spacex/launches.html"
-                    >Launches</a
-                  >
+                  <a class="dropdown-item" href="launches.html">Launches</a>
                 </li>
               </ul>
             </li>
@@ -99,7 +103,7 @@
               </a>
               <ul class="dropdown-menu">
                 <li>
-                  <a class="dropdown-item" href="nasa/mars.html">Mars</a>
+                  <a class="dropdown-item" href="../nasa/mars.html">Mars</a>
                 </li>
               </ul>
             </li>
@@ -107,6 +111,39 @@
         </div>
       </div>
     </nav>
+    <div class="container">
+      <h1 id="launchesTitle" class="mb-3 mt-3 text-light">Launches:</h1>
+      <div id="launches" class="row"></div>
+
+      <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+          <li class="page-item">
+            <a
+              id="previous"
+              href="#launchesTitle"
+              class="page-link bg-dark text-light border-primary"
+              >Previous</a
+            >
+          </li>
+          <li class="page-item">
+            <input
+              id="page"
+              class="page-link text-center bg-dark text-light border-primary"
+              type="number"
+              value="1"
+            />
+          </li>
+          <li class="page-item">
+            <a
+              id="next"
+              href="#launchesTitle"
+              class="page-link bg-dark text-light border-primary"
+              >Next</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
 
     <footer class="text-center text-lg-start bg-dark text-muted">
       <section
@@ -158,5 +195,6 @@
       </section>
       <div class="text-center p-4">© 2022 Copyright: Ascencion Orbit</div>
     </footer>
+    <script src="../../assets/js/spacex/launches.js"></script>
   </body>
 </html>
