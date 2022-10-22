@@ -293,8 +293,8 @@
           <a href="https://wa.link/y806ck" target="_blank" class="me-4 link-secondary h1 text-decoration-none">
             <i class="fa-brands fa-whatsapp"></i>
           </a>
-          <a href="#" class="me-4 link-secondary h1 text-decoration-none">
-            <i class="fa-brands fa-facebook-messenger"></i>
+          <a href="https://www.facebook.com/profile.php?id=100086623461463" target="_blank" class="me-4 link-secondary h1 text-decoration-none">
+            <i class="fa-brands fa-facebook"></i>
           </a>
         </div>
       </section>
@@ -331,6 +331,37 @@
       </section>
       <div class="text-center p-4">© 2022 Copyright: Ascencion Orbit</div>
     </footer>
+
+    <!-- Messenger Plugin de chat Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Plugin de chat code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "103982539175625");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v15.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
 
     <script src="assets/js/spacex/rockets.js"></script>
   </body>
