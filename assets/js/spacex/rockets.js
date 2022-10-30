@@ -23,7 +23,7 @@ $(document).ready(() => {
 
 const printRockets = (response) => {
     $.each(response, (i, item) => {
-        let col = `<div class="col-lg-6 col-md-6 col-sm-12 mb-5">
+        let col = `<div class="col-lg-6 col-md-6 col-sm-12 mb-5 d-flex">
          <div class="card text-bg-dark border-primary mx-auto" style="width: 20rem;">
            <img src="${item.flickr_images[0]}" class="card-img-top" alt="${item.name}">
            <div class="card-body">
