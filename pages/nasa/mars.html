@@ -4,12 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mars</title>
+    <title>NASA API</title>
     <link
       rel="stylesheet"
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
     />
+    <link rel="stylesheet" href="../../assets/css/animation.css" />
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
@@ -19,15 +20,17 @@
       data-auto-replace-svg="nest"
     ></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
   </head>
   <body class="bg-dark">
     <nav
       class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-light sticky-top"
     >
       <div class="container-fluid">
-        <a class="navbar-brand" href="../../index.html"
-          ><i class="fa-solid fa-rocket"></i> Ascencion Orbit</a
-        >
+        <a class="navbar-brand" href="../index.html"
+          ><i class="fa-solid fa-rocket"></i> Ascencion Orbit
+          <img id="icon" src="../../assets/img/astronauta.png" alt="Astronauta"
+        /></a>
         <button
           class="navbar-toggler"
           type="button"
@@ -45,12 +48,12 @@
               <a
                 class="nav-link active"
                 aria-current="page"
-                href="../../index.html"
+                href="../index.html"
                 >Home</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../about.html">About</a>
+              <a class="nav-link" href="about.html">About</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="../contact.html">Contact</a>
@@ -67,16 +70,22 @@
               </a>
               <ul class="dropdown-menu">
                 <li>
-                  <a class="dropdown-item" href="../spacex/company.html">Company</a>
+                  <a class="dropdown-item" href="../spacex/company.html"
+                    >Company</a
+                  >
                 </li>
-                <li><a class="dropdown-item" href="../spacex/crew.html">Crew</a></li>
+                <li>
+                  <a class="dropdown-item" href="../spacex/crew.html">Crew</a>
+                </li>
                 <li>
                   <a class="dropdown-item" href="../spacex/platforms.html"
                     >Landing Platforms</a
                   >
                 </li>
                 <li>
-                  <a class="dropdown-item" href="../spacex/launches.html">Launches</a>
+                  <a class="dropdown-item" href="../spacex/launches.html"
+                    >Launches</a
+                  >
                 </li>
               </ul>
             </li>
@@ -93,7 +102,7 @@
               </a>
               <ul class="dropdown-menu">
                 <li>
-                  <a class="dropdown-item" href="mars.html">Mars</a>
+                  <a class="dropdown-item" href="../nasa/mars.html">Mars</a>
                 </li>
               </ul>
             </li>
@@ -101,6 +110,11 @@
         </div>
       </div>
     </nav>
+
+    <div class="container">
+      <h1 class="mb-3 mt-3 text-light">Mars images:</h1>
+      <div id="fotos" class="row"></div>
+    </div>
 
     <footer class="text-center text-lg-start bg-dark text-muted">
       <section
@@ -111,10 +125,18 @@
         </div>
 
         <div>
-          <a href="https://wa.link/y806ck" target="_blank" class="me-4 link-secondary h1 text-decoration-none">
+          <a
+            href="https://wa.link/y806ck"
+            target="_blank"
+            class="me-4 link-secondary h1 text-decoration-none"
+          >
             <i class="fa-brands fa-whatsapp"></i>
           </a>
-          <a href="https://www.facebook.com/profile.php?id=100086623461463" target="_blank" class="me-4 link-secondary h1 text-decoration-none">
+          <a
+            href="https://www.facebook.com/profile.php?id=100086623461463"
+            target="_blank"
+            class="me-4 link-secondary h1 text-decoration-none"
+          >
             <i class="fa-brands fa-facebook"></i>
           </a>
         </div>
@@ -152,5 +174,7 @@
       </section>
       <div class="text-center p-4">© 2022 Copyright: Ascencion Orbit</div>
     </footer>
+    <script src="../../assets/js/animation.js"></script>
+    <script src="../../assets/js/nasa/mars.js"></script>
   </body>
 </html>

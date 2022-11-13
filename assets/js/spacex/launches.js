@@ -29,7 +29,14 @@ $(document).ready(() => {
             if (numPage < sizePages && numPage > 0) {
                 loadPage(url, numPage);
             } else {
-                numPage <= 0 ? $('#page').val(1) : $('#page').val(sizePages);
+                if (numPage <= 0) {
+                    numPage = 1;
+                    $('#page').val(numPage);
+                } else {
+                    numPage = sizePages;
+                    $('#page').val(numPage);
+                } 
+                loadPage(url, numPage);
             }
         }
     });

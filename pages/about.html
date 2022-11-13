@@ -10,6 +10,7 @@
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
     />
+    <link rel="stylesheet" href="../assets/css/animation.css" />
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
@@ -19,6 +20,7 @@
       data-auto-replace-svg="nest"
     ></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
   </head>
   <body class="bg-dark">
     <nav
@@ -26,8 +28,9 @@
     >
       <div class="container-fluid">
         <a class="navbar-brand" href="../index.html"
-          ><i class="fa-solid fa-rocket"></i> Ascencion Orbit</a
-        >
+          ><i class="fa-solid fa-rocket"></i> Ascencion Orbit
+          <img id="icon" src="../assets/img/astronauta.png" alt="Astronauta"
+        /></a>
         <button
           class="navbar-toggler"
           type="button"
@@ -258,9 +261,7 @@
                       <strong class="text-light">Get ...:</strong>
                       <ul>
                         <li class="text-light">Method: <code>GET</code></li>
-                        <li class="text-light">
-                          URL: <code>...</code>
-                        </li>
+                        <li class="text-light">URL: <code>...</code></li>
                         <li class="text-light">Auth: <code>True</code></li>
                         <li class="text-light">
                           Code: <code>200 OK</code> <br />
@@ -441,5 +442,6 @@
       </section>
       <div class="text-center p-4">© 2022 Copyright: Ascencion Orbit</div>
     </footer>
+    <script src="../assets/js/animation.js"></script>
   </body>
 </html>

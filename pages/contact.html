@@ -19,80 +19,86 @@
       data-auto-replace-svg="nest"
     ></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link href="../assets/js/validetta/validetta.css" rel="stylesheet" type="text/css" media="screen" >
-
-    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script type="text/javascript" src="../assets/js/validetta/validetta.js"></script>
+    <link
+      href="../assets/js/validetta/validetta.css"
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+    />
+    <link rel="stylesheet" href="../assets/css/animation.css" />
+    <script
+      type="text/javascript"
+      src="http://code.jquery.com/jquery-latest.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../assets/js/validetta/validetta.js"
+    ></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script>
-
-      $(document).ready(function(){
-
+      $(document).ready(function () {
         $("#formulario").validetta({
-          showErrorMessages : false
+          showErrorMessages: false,
         });
-       $('#formulario').validetta({
-        display : 'inline',
-  onValid : function( event ) {
-    event.preventDefault(); // Will prevent the submission of the form
-    //alert( 'Nice, Form is valid.' );
-    Swal.fire({
-  title: '¿Enviar información?',
-  text: "Los datos están listos para enviarlos, ¿continuar?",
-  icon: 'info',
-  showCancelButton: true,
-  confirmButtonColor: '#3085d6',
-  cancelButtonColor: '#d33',
-  confirmButtonText: 'Enviar',
-  cancelButtonText: 'Cancelar'
-}).then((result) => {
-  if (result.isConfirmed) {
-    
-    $("#formulario").unbind("submit");
-    $("#formulario").submit();
-
-  }
-})
-  },
-  onError : function( event ){
-    Swal.fire(
-  'Error al procesar',
-  'Por favor, rellene todos los campos del formulario.',
-  'error'
-)
-  }
-});
+        $("#formulario").validetta({
+          display: "inline",
+          onValid: function (event) {
+            event.preventDefault(); // Will prevent the submission of the form
+            //alert( 'Nice, Form is valid.' );
+            Swal.fire({
+              title: "¿Enviar información?",
+              text: "Los datos están listos para enviarlos, ¿continuar?",
+              icon: "info",
+              showCancelButton: true,
+              confirmButtonColor: "#3085d6",
+              cancelButtonColor: "#d33",
+              confirmButtonText: "Enviar",
+              cancelButtonText: "Cancelar",
+            }).then((result) => {
+              if (result.isConfirmed) {
+                $("#formulario").unbind("submit");
+                $("#formulario").submit();
+              }
+            });
+          },
+          onError: function (event) {
+            Swal.fire(
+              "Error al procesar",
+              "Por favor, rellene todos los campos del formulario.",
+              "error"
+            );
+          },
+        });
       });
 
-function limpiar(){
-Swal.fire({
-  title: '¿Está seguro?',
-  text: "Se limpiaran todos los campos del formulario.",
-  icon: 'info',
-  showCancelButton: true,
-  confirmButtonColor: '#3085d6',
-  cancelButtonColor: '#d33',
-  confirmButtonText: 'Limpiar',
-  cancelButtonText: 'Cancelar'
-}).then((result) => {
-  if (result.isConfirmed) {
-    $('form[name="formName"]')[0].reset();
-  }
-})
-  
-}
-  
-
+      function limpiar() {
+        Swal.fire({
+          title: "¿Está seguro?",
+          text: "Se limpiaran todos los campos del formulario.",
+          icon: "info",
+          showCancelButton: true,
+          confirmButtonColor: "#3085d6",
+          cancelButtonColor: "#d33",
+          confirmButtonText: "Limpiar",
+          cancelButtonText: "Cancelar",
+        }).then((result) => {
+          if (result.isConfirmed) {
+            $('form[name="formName"]')[0].reset();
+          }
+        });
+      }
     </script>
   </head>
-  <body class="bg-ligth">
+  <body class="bg-dark">
     <nav
       class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-light sticky-top"
     >
       <div class="container-fluid">
         <a class="navbar-brand" href="../index.html"
-          ><i class="fa-solid fa-rocket"></i> Ascencion Orbit</a
-        >
+          ><i class="fa-solid fa-rocket"></i> Ascencion Orbit
+          <img id="icon" src="../assets/img/astronauta.png" alt="Astronauta"
+        /></a>
         <button
           class="navbar-toggler"
           type="button"
@@ -166,9 +172,6 @@ Swal.fire({
                 <li>
                   <a class="dropdown-item" href="nasa/mars.html">Mars</a>
                 </li>
-                <li>
-                  <a class="dropdown-item" href="nasa/mars2.html">Mars 2</a>
-                </li>
               </ul>
             </li>
           </ul>
@@ -176,104 +179,169 @@ Swal.fire({
       </div>
     </nav>
 
-    <div class="container">
+    <div class="container text-light">
       <h1 class="mb-3 mt-3 text-light">Formulario de contacto</h1>
-      
 
-        <form id="formulario" name="formName">
-
-          <div class="row">
-          <div class="col-12">
-            <label>Nombres:</label>
-        <input type="text" name="exm" data-validetta="required" class="form-control" pattern="[A-Za-z ]+"/>
-          </div>
-          </div>
-
-          <div class="row">
-          <div class="col-12">
-           <br><label>Apellidos:</label>
-        <input type="text" name="exm2" data-validetta="required" class="form-control" pattern="[A-Za-z ]+"/>
-          </div>
-          </div>
-
-           <div class="row">
-          <div class="col-12">
-           <br><label>Género:</label><br>
-        <input type="radio" name="exm-rd" data-validetta="required" class="form-check-input">M
-        <input type="radio" name="exm-rd" data-validetta="required" class="form-check-input">F
-          </div>
-          </div>
-        
-         <div class="row">
-          <div class="col-12">
-           <br><br><label>Comentarios:</label><br>
-        <textarea name="exm-txt" data-validetta="required" class="form-control"></textarea>
-          </div>
-          </div>
-
-          <div class="row">
-          <div class="col-12">
-           <br><label>Correo electrónico:</label>
-        <input type="email" name="exm" data-validetta="required,email" class="form-control"/>
-          </div>
-          </div>
-
-          <div class="row">
-          <div class="col-12">
-           <br><label>Intereses:</label><br>
-        <input type="checkbox" name="exm-cb" data-validetta="minChecked[2]" class="form-check-input"> Exploración espacial <br />
-        <input type="checkbox" name="exm-cb" data-validetta="minChecked[2]" class="form-check-input"> Estudio de cuerpos celestes <br />
-        <input type="checkbox" name="exm-cb" data-validetta="minChecked[2]" class="form-check-input"> Descubrimiento de Exoplanetas <br />
-        <input type="checkbox" name="exm-cb" data-validetta="minChecked[2]" class="form-check-input"> Análisis de cometas y asteroides <br />
-          </div>
-          </div>
-        
-        
+      <form id="formulario" name="formName">
         <div class="row">
           <div class="col-12">
-           <br><label>Edad:</label>
-        <input type="number" name="number" data-validetta="number,required" class="form-control" min="8"/>
+            <label class="form-label">Nombres:</label>
+            <input
+              type="text"
+              name="exm"
+              data-validetta="required"
+              class="form-control"
+              pattern="[A-Za-z ]+"
+            />
           </div>
-          </div>
+        </div>
 
-          <div class="row">
+        <div class="row">
           <div class="col-12">
-           <br><label>Teléfono:</label>
-        <input type="text" name="number" data-validetta="number,required" class="form-control"/>
+            <br /><label class="form-label">Apellidos:</label>
+            <input
+              type="text"
+              name="exm2"
+              data-validetta="required"
+              class="form-control"
+              pattern="[A-Za-z ]+"
+            />
           </div>
-          </div>
-        
-         <div class="row">
+        </div>
+
+        <div class="row">
           <div class="col-12">
-           <br><label>Departamento:</label>
-        <select data-validetta="required" name="exm-sb" class="form-select">
-            <option val="S">Sonsonate</option>
-            <option val="M">Morazán</option>
-            <option val="SM">San Miguel</option>
-            <option val="SA">Santa Ana</option>
-            <option val="SS">San Salvador</option>
-        </select>
+            <br /><label class="form-label">Género:</label><br />
+            <input
+              type="radio"
+              name="exm-rd"
+              data-validetta="required"
+              class="form-check-input"
+            />M
+            <input
+              type="radio"
+              name="exm-rd"
+              data-validetta="required"
+              class="form-check-input"
+            />F
           </div>
-          </div>
+        </div>
 
-          <div class="row" style="text-align: center;">
+        <div class="row">
+          <div class="col-12">
+            <br /><label class="form-label">Comentarios:</label><br />
+            <textarea
+              name="exm-txt"
+              data-validetta="required"
+              class="form-control"
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <br /><label class="form-label">Correo electrónico:</label>
+            <input
+              type="email"
+              name="exm"
+              data-validetta="required,email"
+              class="form-control"
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <br /><label class="form-label">Intereses:</label><br />
+            <input
+              type="checkbox"
+              name="exm-cb"
+              data-validetta="minChecked[2]"
+              class="form-check-input"
+            />
+            Exploración espacial <br />
+            <input
+              type="checkbox"
+              name="exm-cb"
+              data-validetta="minChecked[2]"
+              class="form-check-input"
+            />
+            Estudio de cuerpos celestes <br />
+            <input
+              type="checkbox"
+              name="exm-cb"
+              data-validetta="minChecked[2]"
+              class="form-check-input"
+            />
+            Descubrimiento de Exoplanetas <br />
+            <input
+              type="checkbox"
+              name="exm-cb"
+              data-validetta="minChecked[2]"
+              class="form-check-input"
+            />
+            Análisis de cometas y asteroides <br />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <br /><label class="form-label">Edad:</label>
+            <input
+              type="number"
+              name="number"
+              data-validetta="number,required"
+              class="form-control"
+              min="8"
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <br /><label class="form-label">Teléfono:</label>
+            <input
+              type="text"
+              name="number"
+              data-validetta="number,required"
+              class="form-control"
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <br /><label class="form-label">Departamento:</label>
+            <select data-validetta="required" name="exm-sb" class="form-select">
+              <option val="S">Sonsonate</option>
+              <option val="M">Morazán</option>
+              <option val="SM">San Miguel</option>
+              <option val="SA">Santa Ana</option>
+              <option val="SS">San Salvador</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row" style="text-align: center">
           <div class="col-6">
-          
-          <br><input type="submit" value="Enviar información" class="btn btn-primary">
-       
+            <br /><input
+              type="submit"
+              value="Enviar información"
+              class="btn btn-primary"
+            />
           </div>
 
           <div class="col-6">
-            <br><input type="button" value="Limpiar formulario" class="btn btn-secondary" onclick="limpiar();">
+            <br /><input
+              type="button"
+              value="Limpiar formulario"
+              class="btn btn-secondary"
+              onclick="limpiar();"
+            />
           </div>
-          
-          </div>
-
-        
-        
-
+        </div>
       </form>
-      <br>
+      <br />
     </div>
 
     <footer class="text-center text-lg-start bg-dark text-muted">
@@ -285,10 +353,18 @@ Swal.fire({
         </div>
 
         <div>
-          <a href="https://wa.link/y806ck" target="_blank" class="me-4 link-secondary h1 text-decoration-none">
+          <a
+            href="https://wa.link/y806ck"
+            target="_blank"
+            class="me-4 link-secondary h1 text-decoration-none"
+          >
             <i class="fa-brands fa-whatsapp"></i>
           </a>
-          <a href="https://www.facebook.com/profile.php?id=100086623461463" target="_blank" class="me-4 link-secondary h1 text-decoration-none">
+          <a
+            href="https://www.facebook.com/profile.php?id=100086623461463"
+            target="_blank"
+            class="me-4 link-secondary h1 text-decoration-none"
+          >
             <i class="fa-brands fa-facebook"></i>
           </a>
         </div>
@@ -326,6 +402,6 @@ Swal.fire({
       </section>
       <div class="text-center p-4">© 2022 Copyright: Ascencion Orbit</div>
     </footer>
-    
+    <script src="../assets/js/animation.js"></script>
   </body>
 </html>
