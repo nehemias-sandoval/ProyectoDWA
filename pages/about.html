@@ -106,6 +106,25 @@
                 </li>
               </ul>
             </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Systeme Solaire
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="systeme-solaire/planets.html">Planets</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="systeme-solaire/count.html">Count</a>
+                </li>
+              </ul>
+            </li>
           </ul>
         </div>
       </div>
@@ -245,41 +264,28 @@
                         user friendly APIs
                       </p>
 
-                      <strong class="text-light">Get ...:</strong>
+                      <strong class="text-light">Get mars images:</strong>
                       <ul>
                         <li class="text-light">Method: <code>GET</code></li>
                         <li class="text-light">
                           URL:
-                          <code>...</code>
+                          <code>https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&page=2&api_key=DEMO_KEY</code>
                         </li>
-                        <li class="text-light">Auth: <code>True</code></li>
+                        <li class="text-light">Auth: <code>False</code></li>
                         <li class="text-light">
                           Code: <code>200 OK</code> <br />
                         </li>
                       </ul>
 
-                      <strong class="text-light">Get ...:</strong>
+                      <strong class="text-light">Get astronomy picture of the day:</strong>
                       <ul>
                         <li class="text-light">Method: <code>GET</code></li>
-                        <li class="text-light">URL: <code>...</code></li>
-                        <li class="text-light">Auth: <code>True</code></li>
+                        <li class="text-light">URL: <code>https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY</code></li>
+                        <li class="text-light">Auth: <code>False</code></li>
                         <li class="text-light">
                           Code: <code>200 OK</code> <br />
                         </li>
-                      </ul>
-
-                      <strong class="text-light">Get...:</strong>
-                      <ul>
-                        <li class="text-light">Method: <code>GET</code></li>
-                        <li class="text-light">
-                          URL:
-                          <code>...</code>
-                        </li>
-                        <li class="text-light">Auth: <code>True</code></li>
-                        <li class="text-light">
-                          Code: <code>200 OK</code> <br />
-                        </li>
-                      </ul>
+                      </ul>      
 
                       <a
                         href="https://api.nasa.gov/"
