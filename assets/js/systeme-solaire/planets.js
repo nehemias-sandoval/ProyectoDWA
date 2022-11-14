@@ -15,7 +15,7 @@ $(document).ready(() => {
 const printPlanets = (response) => {
   $.each(response, (i, item) => {
     let col = `<div class="col-lg-4 col-md-6 col-sm-12 mb-5 d-flex">
-        <div class="card bg-dark border-primary" style="width: 18rem;">
+        <div class="card bg-dark border-primary mx-auto" style="width: 18rem;">
         <div class="card-body">
           <h5 class="card-title text-light">${item.englishName}</h5>
         <ul> 
